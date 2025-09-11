@@ -1,12 +1,12 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 group = "net.subroh0508"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation(libs.kotlin.test)
 }
 
 tasks.test {
