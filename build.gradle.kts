@@ -1,19 +1,19 @@
 plugins {
-    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.jvm) apply false
 }
 
-group = "net.subroh0508"
-version = "1.0-SNAPSHOT"
-
-dependencies {
-    implementation(libs.koog.agents)
-    testImplementation(libs.kotlin.test)
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(17)
+subprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin("org.jetbrains.kotlin.jvm")) {
+            configure<org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension> {
+                jvmToolchain(17)
+            }
+        }
+    }
 }

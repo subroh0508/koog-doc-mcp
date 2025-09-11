@@ -12,3 +12,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "koog-mcp-doc"
+
+include(":mcp")
+include(":docs")
