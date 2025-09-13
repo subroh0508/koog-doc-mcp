@@ -6,7 +6,9 @@ group = "net.subroh0508.mcp"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    implementation(libs.koog.agents)
+    implementation(libs.mcp.sdk)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.server.netty)
     testImplementation(libs.kotlin.test)
 }
 

@@ -1,11 +1,14 @@
 [versions]
 kotlin = "2.2.20"
 junit = "5.13.4"
-koog = "0.4.1"
+mcp = "0.7.0"
+ktor = "3.3.0"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-koog-agents = { module = "ai.koog:koog-agents", version.ref = "koog" }
+mcp-sdk = { module = "io.modelcontextprotocol:kotlin-sdk", version.ref = "mcp" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
